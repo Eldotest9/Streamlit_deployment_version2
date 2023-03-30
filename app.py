@@ -144,14 +144,14 @@ with st.sidebar.expander("Filter Renesas Parts:"):
                      (0, int(Renesas_combined_cores["Lead Count (#)"].max())),step = 5)
 
 
-Renesas_combined_cores_filtered = Renesas_combined_cores[(Renesas_combined_cores["Operating Frequency (MHz)"] >= freq[0]) & 
-                                                         (Renesas_combined_cores["Operating Frequency (MHz)"] <= freq[1])]
-Renesas_combined_cores_filtered = Renesas_combined_cores_filtered[(Renesas_combined_cores_filtered['RAM Size (kB)'] >= RAM[0]) & 
-                                                         (Renesas_combined_cores_filtered['RAM Size (kB)'] <= RAM[1])]
-Renesas_combined_cores_filtered = Renesas_combined_cores_filtered[(Renesas_combined_cores_filtered['Flash Size (kB) (Prog)'] >= Flash[0]) & 
-                                                         (Renesas_combined_cores_filtered['Flash Size (kB) (Prog)'] <= Flash[1])]
-Renesas_combined_cores_filtered = Renesas_combined_cores_filtered[(Renesas_combined_cores_filtered['Lead Count (#)'] >= Lead[0]) & 
-                                                         (Renesas_combined_cores_filtered['Lead Count (#)'] <= Lead[1])]
+Renesas_combined_cores_filtered = Renesas_combined_cores[(Renesas_combined_cores["Operating Frequency (MHz)"] >= int(freq[0])) & 
+                                                         (Renesas_combined_cores["Operating Frequency (MHz)"] <= int(freq[1]))]
+Renesas_combined_cores_filtered = Renesas_combined_cores_filtered[(Renesas_combined_cores_filtered['RAM Size (kB)'] >= int(RAM[0])) & 
+                                                         (Renesas_combined_cores_filtered['RAM Size (kB)'] <= int(RAM[1]))]
+Renesas_combined_cores_filtered = Renesas_combined_cores_filtered[(Renesas_combined_cores_filtered['Flash Size (kB) (Prog)'] >= int(Flash[0])) & 
+                                                         (Renesas_combined_cores_filtered['Flash Size (kB) (Prog)'] <= int(Flash[1]))]
+Renesas_combined_cores_filtered = Renesas_combined_cores_filtered[(Renesas_combined_cores_filtered['Lead Count (#)'] >= int(Lead[0])) & 
+                                                         (Renesas_combined_cores_filtered['Lead Count (#)'] <= int(Lead[1]))]
 
 if Renesas_combined_cores_filtered.empty:
     new_combined_cores = Renesas_combined_cores_filtered
