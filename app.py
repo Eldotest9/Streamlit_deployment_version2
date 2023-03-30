@@ -16,8 +16,8 @@ st.set_page_config(page_title="Renesas Cross-reference Guide",
 
 
 
-@st.cache(allow_output_mutation=True)
-#@st.cache_data
+#@st.cache(allow_output_mutation=True)
+@st.cache_data
 def get_data_from_excel():
 
     Combined_cleaned = pd.read_excel(r"Cross_referece_guide_Refereal.xlsx",sheet_name= "Combined_cleaned_all_parts")
