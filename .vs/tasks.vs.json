@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Streamlit_web_app_for_cross_refernce",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}
